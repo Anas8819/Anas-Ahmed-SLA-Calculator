@@ -16,7 +16,7 @@ namespace Anas_Ahmed_SLA_Calculator.Controllers
             return View(db.Complaints.ToList());
         }
 
-        public ActionResult Create() //Have only taken priority from user. Complaint will be regitered with current time
+        public ActionResult Create() //Have only taken priority from user. Complaint will be regitered with current time.
         {
             return View();
         }
