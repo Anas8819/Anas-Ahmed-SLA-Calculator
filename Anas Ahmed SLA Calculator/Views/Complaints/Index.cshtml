@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Data_Access.Complaint>
+
+@{
+    ViewBag.Title = "Index";
+}
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ComplaintType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComplaintTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ComplaintDeadline)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplaintType)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplaintTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ComplaintDeadline)
+            </td>
+        </tr>
+    }
+
+</table>
